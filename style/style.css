@@ -274,6 +274,31 @@ menu {
   line-height: 12px;
   font-weight: bold;
 }
+.wingets .sampler .cont {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 28px;
+}
+.wingets .sampler .cont .wrapRight img {
+  display: block;
+  margin: 8px auto;
+}
+.wingets .pump .cont {
+  padding-top: 35px;
+}
+.wingets .pump .cont img:first-child {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.wingets .pump .cont img:last-child {
+  margin-left: 25px;
+}
+.wingets .pump .cont p {
+  font-size: 12px;
+  color: #2f3b4c;
+  text-align: center;
+  margin-top: 35px;
+}
 .wrap {
   display: flex;
   flex-wrap: wrap;
