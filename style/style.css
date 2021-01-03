@@ -12,6 +12,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+h4 {
+  font-size: 13px;
+  color: #2f3b4c;
+  font-weight: bold;
+}
 
 /* ContainerLeft */
 .containerLeft {
@@ -495,6 +500,90 @@ menu {
 }
 .wrap .wrapMethod .container .centerBlock {
   border-right: 1px solid #bfc2c4;
+}
+.wrap .wrapMethod .container .centerBlock .picture {
+  display: flex;
+  height: 162px;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+.wrap .wrapMethod .container .centerBlock .picture div:nth-of-type(2),
+.wrap .wrapMethod .container .centerBlock .picture div:nth-of-type(4) {
+  margin-top: 30px;
+}
+.wrap .wrapMethod .container .centerBlock .picture .data {
+  border: 2px solid #bfc2c4;
+  padding: 10px;
+  height: 87px;
+  margin-top: 10px;
+  margin-left: 23px;
+  margin-bottom: 3px;
+}
+.wrap .wrapMethod .container .centerBlock .picture .data p {
+  color: #2f3b4c;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.wrap .wrapMethod .container .centerBlock .control {
+  border-top: 2px solid #bfc2c4;
+  position: relative;
+  width: 585px;
+  height: 155px;
+  margin: 0 auto;
+}
+.wrap .wrapMethod .container .centerBlock .control .on_off {
+  display: flex;
+  margin-top: 24px;
+}
+.wrap .wrapMethod .container .centerBlock .control ul {
+  display: flex;
+  padding-top: 17px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.wrap .wrapMethod .container .centerBlock .control ul li {
+  width: 145px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #727272;
+  line-height: 25px;
+}
+.wrap .wrapMethod .container .centerBlock .control .on_off input {
+  width: 16px;
+  height: 16px;
+  margin: 0 9px 0 22px;
+  cursor: pointer;
+}
+.wrap .wrapMethod .container .centerBlock .control .on_off p {
+  color: #727272;
+  font-size: 12px;
+  line-height: 16px;
+}
+.wrap .wrapMethod .container .centerBlock .control ul li input {
+  width: 66px;
+  height: 26px;
+  border: 1px solid #bfc2c4;
+  text-align: center;
+  font-size: 11px;
+  color: #2f3b4c;
+  margin-right: 5px;
+}
+.wrap .wrapMethod .container .centerBlock .post {
+  border-top: 2px solid #bfc2c4;
+  position: relative;
+  height: 71px;
+  margin: 0 12.5px;
+  width: 318px;
+}
+.wrap .wrapMethod .container .centerBlock h4 {
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  top: -9px;
+  height: 15px;
+  margin: 0 12px;
+  padding: 0 10px;
 }
 .wrap .wrapMethod .footer {
   height: 54px;
