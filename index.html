@@ -61,7 +61,7 @@
           </ul>
         </div>
       </menu>
-      <div class="rightBlock">
+      <div class="block">
         <div class="nikname">
           <img src="img/profile.png" alt="profile" title="profile">
           <p>Alexander</p>
@@ -180,9 +180,70 @@
               </div>
               <div class="post">
                 <h4>Post Run</h4>
+                <ul>
+                  <li>Post Run</li>
+                  <li><input type="text" value="16.849">mL/min</li>
+                </ul>
               </div>
             </div>
-            <div class="rightBlock"></div>
+            <div class="rightBlock">
+              <div class="pressure">
+                <h4>Pressure/Flow Settings</h4>
+                <ul>
+                  <li>
+                    <input type="radio" name="settings" value="1">
+                    <p>Constant Pressure</p>
+                  </li>
+                  <li>
+                    <input type="radio" name="settings" value="2" checked>
+                    <p>Ramped Pressure</p>
+                  </li>
+                  <li>
+                    <input type="radio" name="settings" value="3">
+                    <p>Constant Flow</p>
+                  </li>
+                  <li>
+                    <input type="radio" name="settings" value="4">
+                    <p>Ramped Flow</p>
+                  </li>
+                </ul>
+              </div>
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Ramp ##</th>
+                  <th>Rate, mL/min per min</th>
+                  <th>Value, mL/min</th>
+                  <th>Hold Time, min</th>
+                  <th>Run Time, min</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(Initial)</td>
+                  <td></td>
+                  <td>16.849</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="ramp" value="1"></td>
+                  <td>Ramp 1</td>
+                  <td>10</td>
+                  <td>16.849</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="ramp" value="2"></td>
+                  <td>Ramp 2</td>
+                  <td>20</td>
+                  <td>16.849</td>
+                  <td>5</td>
+                  <td>26</td>
+                </tr>
+              </table>
+              <img src="img/switch.png" alt="switch" title="switch">
+            </div>
           </div>
           <div class="footer">
             <div class="buttonLeft">
@@ -243,7 +304,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

@@ -1,4 +1,12 @@
-/* font-family: 'Roboto', sans-serif; */
+/* create animation */
+@keyframes Animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +20,37 @@ body {
   display: flex;
   justify-content: space-between;
 }
+h1 {
+  font-size: 27px;
+  color: #ffffff;
+  margin-left: 27px;
+  text-transform: uppercase;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #2f3b4c;
+  margin-left: 18px;
+  line-height: 45px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 14px;
+  color: #2f3b4c;
+  line-height: 12px;
+  font-weight: bold;
+}
 h4 {
   font-size: 13px;
   color: #2f3b4c;
   font-weight: bold;
+}
+input:focus,
+button:focus {
+  outline: 0;
+}
+ul {
+  list-style: none;
 }
 
 /* ContainerLeft */
@@ -25,25 +60,19 @@ h4 {
   flex-direction: column;
   background-color: #e1e5e8;
 }
-.logo {
+.containerLeft .headerLeft .logo {
   width: 280px;
   height: 50px;
   background-color: #2f3b4c;
   padding-top: 8px;
 }
-h1 {
-  font-size: 27px;
-  color: #ffffff;
-  margin-left: 27px;
-  text-transform: uppercase;
-}
-.search {
+.containerLeft .headerLeft .search {
   width: 280px;
   border-bottom: 2px solid #bdc9d1;
   padding: 22px 0 22px 22px;
   display: flex;
 }
-.search input {
+.containerLeft .headerLeft .search input {
   color: #2f3b4c;
   font-size: 12px;
   width: 220px;
@@ -51,11 +80,7 @@ h1 {
   border: none;
   background-color: #e1e5e8;
 }
-.search input:focus,
-.search button:focus {
-  outline: 0;
-}
-.search button {
+.containerLeft .headerLeft .search button {
   display: block;
   border: none;
   background-color: #e1e5e8;
@@ -63,17 +88,18 @@ h1 {
   height: 17px;
   cursor: pointer;
 }
-.status {
+.containerLeft .status {
   position: relative;
 }
-.timerLevel {
-  width: 75px;
+.containerLeft .status .timerLevel {
   height: 26px;
   background-color: #80808057;
   position: absolute;
   top: 0;
+  transition: width 5s;
+  animation: Animation 60s infinite;
 }
-.timer {
+.containerLeft .status .timer {
   width: 280px;
   height: 26px;
   background-color: #d5d9db;
@@ -81,11 +107,11 @@ h1 {
   justify-content: space-between;
   padding: 6px 22px;
 }
-.timer p {
+.containerLeft .status .timer p {
   color: #2f3b4c;
   font-size: 12px;
 }
-.systemStatus {
+.containerLeft .status .systemStatus {
   width: 280px;
   height: 50px;
   background-color: #2575aa;
@@ -93,31 +119,31 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.systemStatus p {
+.containerLeft .status .systemStatus p {
   text-transform: uppercase;
   font-size: 22px;
   color: #ffffff;
 }
-.on_off {
+.containerLeft .status .systemStatus .on_off {
   width: 57px;
   height: 24px;
   display: flex;
   justify-content: space-between;
 }
-.on_off .on,
-.on_off .off {
+.containerLeft .status .systemStatus .on_off .on,
+.containerLeft .status .systemStatus .on_off .off {
   width: 24px;
   height: 24px;
   position: relative;
   padding-top: 7px;
   cursor: pointer;
 }
-.on_off p {
+.containerLeft .status .systemStatus .on_off p {
   font-size: 8px;
   color: #ffffff;
   text-align: center;
 }
-.on_off .lamp {
+.containerLeft .status .systemStatus .on_off .lamp {
   width: 7px;
   height: 7px;
   margin: 0 auto;
@@ -125,115 +151,114 @@ h1 {
   top: -2px;
   left: 9px;
 }
-.on_off .on .lamp {
+.containerLeft .status .systemStatus .on_off .on .lamp {
   background-color: #1a9022;
 }
-.on_off .off .lamp {
+.containerLeft .status .systemStatus .on_off .off .lamp {
   background-color: #8c9092;
 }
 
 /* containerRigth */
 
 /* HEADER */
-.header {
+.containerRigth .header {
   display: flex;
   justify-content: space-around;
   width: 1640px;
   border-bottom: 1px solid #bfc2c4;
 }
-menu {
+.containerRigth .header menu {
   display: flex;
   flex-basis: 100%;
   padding-left: 16px;
   padding-top: 12px;
 }
-.burger i {
+.containerRigth .header .burger i {
   font-size: 25px;
   color: #afb0c3;
   cursor: pointer;
 }
-.burger i:hover {
+.containerRigth .header .burger i:hover {
   color: black;
   text-shadow: 1px 1px 2px #2574a9;
 }
-.headerMenu ul {
+.containerRigth .header .headerMenu ul {
   display: flex;
   width: 543px;
   justify-content: space-between;
   margin-left: 55px;
 }
-.headerMenu li {
-  list-style: none;
+.containerRigth .header .headerMenu li {
   font-size: 17px;
   color: #727272;
   cursor: pointer;
 }
-.headerMenu li:hover {
+.containerRigth .header .headerMenu li:hover {
   color: black;
   text-shadow: 1px 1px 2px #2574a9;
 }
-.headerMenu li i {
+.containerRigth .header .headerMenu li i {
   margin-left: 10px;
   color: #727272;
 }
-.rightBlock {
+.containerRigth .header .block {
   display: flex;
 }
-.nikname,
-.lang,
-.lock {
+.containerRigth .header .block .nikname,
+.containerRigth .header .block .lang,
+.containerRigth .header .block .lock {
   border-left: 1px solid #bdc9d1;
   height: 50px;
 }
-.nikname {
+.containerRigth .header .block .nikname {
   display: flex;
   padding: 11px 23px 0;
 }
-.nikname img {
+.containerRigth .header .block .nikname img {
   margin-right: 15px;
   height: 30px;
   width: 30px;
 }
-.nikname p {
+.containerRigth .header .block .nikname p {
   line-height: 25px;
   font-size: 17px;
   color: #717171;
 }
-.lang {
+.containerRigth .header .block .lang {
   display: flex;
   padding: 11px 17px 0 22px;
   cursor: pointer;
 }
-.lang p {
+.containerRigth .header .block .lang p {
   line-height: 25px;
   font-size: 17px;
   color: #717171;
 }
-.lang i {
+.containerRigth .header .block .lang i {
   margin-left: 17px;
   line-height: 25px;
   color: #717171;
 }
-.lang p:hover {
+.containerRigth .header .block .lang p:hover {
   color: black;
   text-shadow: 1px 1px 2px #2574a9;
 }
-.lock {
+.containerRigth .header .block .lock {
   padding: 11px 26px 0;
 }
 
 /* CONTENT */
-.content {
+.containerRigth .content {
   display: flex;
   justify-content: space-between;
 }
-.wingets {
+.containerRigth .content .wingets {
   width: 225px;
   box-shadow: 5px 0px 6px -3px #bfc2c4;
   position: relative;
   background-color: #f1f3f2;
 }
-.wingets button {
+.containerRigth .content .wingets button {
   position: absolute;
   border: none;
   background-color: white;
@@ -245,134 +270,118 @@ menu {
   border-radius: 15px;
   box-shadow: 2px 3px 5px 2px #bfc2c4;
 }
-.wingets button:focus {
-  outline: 0;
-}
-.sampler,
-.pump {
+.containerRigth .content .wingets .sampler,
+.containerRigth .content .wingets .pump {
   width: 190px;
   height: 190px;
   border: 1px solid #bfc2c4;
   margin: 22px auto 0;
   background-color: #ffff;
 }
-.wingets .title {
+.containerRigth .content .wingets .sampler .title,
+.containerRigth .content .wingets .pump .title {
   height: 30px;
   border-bottom: 1px solid #bfc2c4;
   padding-top: 11px;
   padding-left: 7px;
   display: flex;
 }
-.wingets .lamp {
+.containerRigth .content .wingets .lamp {
   width: 11px;
   height: 11px;
   margin-right: 7px;
 }
-.wingets .sampler .lamp {
+.containerRigth .content .wingets .sampler .lamp {
   background-color: #1a9022;
 }
-.wingets .pump .lamp {
+.containerRigth .content .wingets .pump .lamp {
   background-color: #f5ad3c;
 }
-.wingets h3 {
-  font-size: 14px;
-  color: #2f3b4c;
-  line-height: 12px;
-  font-weight: bold;
-}
-.wingets .sampler .cont {
+
+.containerRigth .content .wingets .sampler .cont {
   display: flex;
   justify-content: space-around;
   padding-top: 28px;
 }
-.wingets .sampler .cont .wrapRight img {
+.containerRigth .content .wingets .sampler .cont .wrapRight img {
   display: block;
   margin: 8px auto;
 }
-.wingets .pump .cont {
+.containerRigth .content .wingets .pump .cont {
   padding-top: 35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.wingets .pump .cont .bottles {
+.containerRigth .content .wingets .pump .cont .bottles {
   width: 31px;
 }
-.wingets .pump .cont .bottles p {
+.containerRigth .content .wingets .pump .cont .bottles p {
   text-align: center;
   margin-top: -5px;
 }
-.wingets .pump .cont div:first-child {
+.containerRigth .content .wingets .pump .cont div:first-child {
   margin-right: 10px;
 }
-.wingets .pump .cont > img {
+.containerRigth .content .wingets .pump .cont > img {
   margin-left: 25px;
 }
-.wingets .pump .cont p {
+.containerRigth .content .wingets .pump .cont p {
   font-size: 12px;
   color: #2f3b4c;
   text-align: center;
   margin-top: 20px;
 }
-.wrap {
+.containerRigth .content .wrap {
   display: flex;
   flex-wrap: wrap;
   padding: 15px 18px 0;
   width: 1415px;
   background-color: #f1f3f2;
 }
-.wrapMethod {
+.containerRigth .content .wrap .wrapMethod {
   width: 1378px;
   height: 489px;
   border: 1px solid #bfc2c4;
   margin-bottom: 15px;
 }
-.mainChart {
+.containerRigth .content .wrap .mainChart {
   width: 776px;
   height: 507px;
   border: 1px solid #bfc2c4;
   margin-right: 15px;
   background-color: #ffff;
 }
-.resultTable {
+.containerRigth .content .wrap .resultTable {
   width: 587px;
   height: 507px;
   border: 1px solid #bfc2c4;
   background-color: #ffff;
 }
-.wrap .title {
+.containerRigth .content .wrap .title {
   height: 45px;
   border-bottom: 2px solid #bfc2c4;
 }
-.wrap .title h2 {
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #2f3b4c;
-  margin-left: 18px;
-  line-height: 45px;
-  font-weight: bold;
-}
-
-.wrapMain {
+.containerRigth .content .wrap .mainChart .wrapMain {
   display: flex;
 }
-.wrapMain .liveChart {
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart {
   width: 711px;
   padding-top: 11px;
 }
-.wrapMain .liveChart ul,
-.wrapMain .liveChart li {
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart ul,
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart li {
   display: flex;
 }
-.wrapMain .liveChart li {
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart li {
   margin-left: 25px;
 }
-.wrapMain .liveChart .leg {
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart .leg {
   width: 21px;
   height: 10px;
   margin-top: 3px;
 }
-.wrapMain .liveChart .plot {
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart .plot {
   font-size: 14px;
   color: #2f3b4c;
   margin-left: 5px;
@@ -381,17 +390,16 @@ menu {
 .bold {
   font-weight: bold;
 }
-.wrapMain .liveChart .grid {
+.containerRigth .content .wrap .mainChart .wrapMain .liveChart .grid {
   margin-top: 11px;
   margin-left: 25px;
 }
-
-.wrapMain .rightBar {
+.containerRigth .content .wrap .mainChart .wrapMain .rightBar {
   width: 63px;
   padding-top: 13px;
   padding-left: 9px;
 }
-.wrapMain .rightBar button {
+.containerRigth .content .wrap .mainChart .wrapMain .rightBar button {
   display: block;
   width: 46px;
   height: 46px;
@@ -400,48 +408,69 @@ menu {
   background-color: #ffff;
   margin-bottom: 10px;
 }
-.wrapMain .rightBar button:focus {
-  outline: 0;
+.containerRigth .content .wrap .mainChart .wrapMain .rightBar button:focus {
   background-color: #0a0a0a;
 }
-.wrap .wrapMethod .title {
+.containerRigth .content .wrap .wrapMethod .title {
   display: flex;
   background-color: #ffffff;
 }
-.wrap .wrapMethod .title .workList {
+.containerRigth .content .wrap .wrapMethod .title .workList {
   border-right: 1px solid #bdc9d1;
   padding-top: 14px;
   background-color: #f1f3f2;
 }
-.wrap .wrapMethod .title .workList ul {
+.containerRigth .content .wrap .wrapMethod .title .workList ul {
   display: flex;
   justify-content: space-around;
   width: 425px;
 }
-.wrap .wrapMethod .title .workList ul li {
-  list-style: none;
+.containerRigth .content .wrap .wrapMethod .title .workList ul li {
   font-size: 14px;
   font-weight: bold;
   color: #2f3b4c;
   text-transform: uppercase;
 }
-.wrap .wrapMethod .title .workList ul li:nth-of-type(2) {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .title
+  .workList
+  ul
+  li:nth-of-type(2) {
   font-weight: normal;
 }
-.wrap .wrapMethod .title .workList ul li:nth-of-type(1) span {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .title
+  .workList
+  ul
+  li:nth-of-type(1)
+  span {
   color: #2a77ab;
   margin-left: 15px;
 }
-.wrap .wrapMethod .title .workList ul li:nth-of-type(2) span {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .title
+  .workList
+  ul
+  li:nth-of-type(2)
+  span {
   font-weight: bold;
   text-transform: lowercase;
   margin-left: 5px;
 }
-.wrap .wrapMethod .title .method {
+.containerRigth .content .wrap .wrapMethod .title .method {
   border-right: 1px solid #bdc9d1;
   padding-top: 14px;
 }
-.wrap .wrapMethod .title .method p {
+.containerRigth .content .wrap .wrapMethod .title .method p {
   font-size: 14px;
   color: #2f3b4c;
   font-weight: bold;
@@ -449,69 +478,89 @@ menu {
   text-align: center;
   margin: 0 16px;
 }
-.wrap .wrapMethod .title .method p span {
+.containerRigth .content .wrap .wrapMethod .title .method p span {
   text-transform: lowercase;
   font-weight: normal;
   margin-left: 9px;
 }
-.wrap .wrapMethod .title .singlRun {
+.containerRigth .content .wrap .wrapMethod .title .singlRun {
   border-right: 1px solid #bdc9d1;
   padding-top: 14px;
   background-color: #f1f3f2;
   width: 173px;
 }
-.wrap .wrapMethod .title .singlRun p {
+.containerRigth .content .wrap .wrapMethod .title .singlRun p {
   font-size: 14px;
   color: #2f3b4c;
   margin-left: 18px;
   text-transform: uppercase;
 }
-.wrap .wrapMethod .container {
+.containerRigth .content .wrap .wrapMethod .container {
   display: flex;
 }
-.wrap .wrapMethod .container .leftBlock {
+.containerRigth .content .wrap .wrapMethod .container .leftBlock {
   height: 388px;
   width: 154px;
   border-right: 1px solid #bfc2c4;
 }
-.wrap .wrapMethod .container .leftBlock .select {
+.containerRigth .content .wrap .wrapMethod .container .leftBlock .select {
   background-color: #ffffff;
 }
-.wrap .wrapMethod .container .leftBlock ul {
+.containerRigth .content .wrap .wrapMethod .container .leftBlock ul {
   width: 154px;
 }
-.wrap .wrapMethod .container .leftBlock ul li {
-  list-style-type: none;
+.containerRigth .content .wrap .wrapMethod .container .leftBlock ul li {
   height: 38px;
   border-bottom: 1px solid #bfc2c4;
   padding-top: 13px;
   cursor: pointer;
 }
-.wrap .wrapMethod .container .leftBlock ul li p {
+.containerRigth .content .wrap .wrapMethod .container .leftBlock ul li p {
   color: #2f3b4c;
   font-size: 13px;
   margin-left: 17px;
 }
-.wrap .wrapMethod .container .centerBlock,
-.wrap .wrapMethod .container .rightBlock {
+.containerRigth .content .wrap .wrapMethod .container .centerBlock,
+.containerRigth .content .wrap .wrapMethod .container .rightBlock {
   background-color: #ffffff;
   width: 614px;
   height: 388px;
 }
-.wrap .wrapMethod .container .centerBlock {
+.containerRigth .content .wrap .wrapMethod .container .centerBlock {
   border-right: 1px solid #bfc2c4;
 }
-.wrap .wrapMethod .container .centerBlock .picture {
+.containerRigth .content .wrap .wrapMethod .container .centerBlock .picture {
   display: flex;
   height: 162px;
   padding-top: 30px;
   padding-left: 50px;
 }
-.wrap .wrapMethod .container .centerBlock .picture div:nth-of-type(2),
-.wrap .wrapMethod .container .centerBlock .picture div:nth-of-type(4) {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .picture
+  div:nth-of-type(2),
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .picture
+  div:nth-of-type(4) {
   margin-top: 30px;
 }
-.wrap .wrapMethod .container .centerBlock .picture .data {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .picture
+  .data {
   border: 2px solid #bfc2c4;
   padding: 10px;
   height: 87px;
@@ -519,48 +568,107 @@ menu {
   margin-left: 23px;
   margin-bottom: 3px;
 }
-.wrap .wrapMethod .container .centerBlock .picture .data p {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .picture
+  .data
+  p {
   color: #2f3b4c;
   text-align: left;
   font-size: 12px;
   margin-bottom: 2px;
 }
-.wrap .wrapMethod .container .centerBlock .control {
+.containerRigth .content .wrap .wrapMethod .container .centerBlock .control {
   border-top: 2px solid #bfc2c4;
   position: relative;
   width: 585px;
   height: 155px;
   margin: 0 auto;
 }
-.wrap .wrapMethod .container .centerBlock .control .on_off {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .control
+  .on_off {
   display: flex;
   margin-top: 24px;
 }
-.wrap .wrapMethod .container .centerBlock .control ul {
+.containerRigth .content .wrap .wrapMethod .container .centerBlock .control ul,
+.containerRigth .content .wrap .wrapMethod .container .centerBlock .post ul {
   display: flex;
   padding-top: 17px;
   flex-wrap: wrap;
-  list-style: none;
 }
-.wrap .wrapMethod .container .centerBlock .control ul li {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .control
+  ul
+  li,
+.containerRigth .content .wrap .wrapMethod .container .centerBlock .post ul li {
   width: 145px;
   margin-bottom: 10px;
   font-size: 12px;
   color: #727272;
   line-height: 25px;
 }
-.wrap .wrapMethod .container .centerBlock .control .on_off input {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .control
+  .on_off
+  input {
   width: 16px;
   height: 16px;
   margin: 0 9px 0 22px;
   cursor: pointer;
 }
-.wrap .wrapMethod .container .centerBlock .control .on_off p {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .control
+  .on_off
+  p {
   color: #727272;
   font-size: 12px;
   line-height: 16px;
 }
-.wrap .wrapMethod .container .centerBlock .control ul li input {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .control
+  ul
+  li
+  input,
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .centerBlock
+  .post
+  ul
+  li
+  input {
   width: 66px;
   height: 26px;
   border: 1px solid #bfc2c4;
@@ -569,14 +677,25 @@ menu {
   color: #2f3b4c;
   margin-right: 5px;
 }
-.wrap .wrapMethod .container .centerBlock .post {
+.containerRigth .content .wrap .wrapMethod .container .centerBlock .post {
   border-top: 2px solid #bfc2c4;
   position: relative;
   height: 71px;
   margin: 0 12.5px;
   width: 318px;
 }
-.wrap .wrapMethod .container .centerBlock h4 {
+.containerRigth .content .wrap .wrapMethod .container .rightBlock {
+  position: relative;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock .pressure {
+  border-top: 2px solid #bfc2c4;
+  position: relative;
+  height: 64px;
+  margin: 16px 12.5px 0;
+  width: 580px;
+}
+.containerRigth .content .wrap .wrapMethod .container .centerBlock h4,
+.containerRigth .content .wrap .wrapMethod .container .rightBlock h4 {
   display: block;
   background-color: #ffffff;
   position: absolute;
@@ -585,7 +704,118 @@ menu {
   margin: 0 12px;
   padding: 0 10px;
 }
-.wrap .wrapMethod .footer {
+.containerRigth .content .wrap .wrapMethod .container .rightBlock input {
+  cursor: pointer;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock .pressure ul {
+  display: flex;
+  width: 535px;
+  margin: 25px auto 21px;
+}
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  .pressure
+  ul
+  li {
+  display: flex;
+  width: 130px;
+}
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  .pressure
+  ul
+  li
+  input {
+  margin-right: 8px;
+}
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  .pressure
+  ul
+  li
+  p {
+  font-size: 12px;
+  color: #2f3a4c;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock table {
+  width: 610px;
+  height: 117px;
+  border-collapse: collapse;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock table tr {
+  border-bottom: 1px solid #dfe0e1;
+}
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  table
+  tr:first-of-type {
+  background-color: #5fa1c1;
+}
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  table
+  tr:nth-of-type(3) {
+  background-color: #f2fafd;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock table th {
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  border: 1px solid #5fa1c1;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock table td {
+  font-size: 12px;
+  color: #2f3b4c;
+  text-align: right;
+  padding-right: 5px;
+  border-right: 1px solid #dfe0e1;
+}
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  table
+  tr
+  td:nth-of-type(1),
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .container
+  .rightBlock
+  table
+  tr
+  td:nth-of-type(2) {
+  text-align: center;
+}
+.containerRigth .content .wrap .wrapMethod .container .rightBlock img {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.containerRigth .content .wrap .wrapMethod .footer {
   height: 54px;
   border-top: 2px solid #bfc2c4;
   background-color: #ffffff;
@@ -593,19 +823,16 @@ menu {
   justify-content: space-between;
   padding: 0 15px 0 25px;
 }
-.wrap .wrapMethod .footer button {
+.containerRigth .content .wrap .wrapMethod .footer button {
   border: none;
   background-color: #ffffff;
   cursor: pointer;
 }
-.wrap .wrapMethod .footer button:focus {
-  outline: 0;
-}
-.wrap .wrapMethod .footer .buttonLeft button {
+.containerRigth .content .wrap .wrapMethod .footer .buttonLeft button {
   margin-top: 5px;
   margin-right: 31px;
 }
-.wrap .wrapMethod .footer .buttonRigth button {
+.containerRigth .content .wrap .wrapMethod .footer .buttonRigth button {
   width: 96px;
   height: 31px;
   margin-top: 10px;
@@ -617,11 +844,17 @@ menu {
   font-size: 13px;
   text-align: center;
 }
-.wrap .wrapMethod .footer .buttonRigth button:last-of-type {
+.containerRigth
+  .content
+  .wrap
+  .wrapMethod
+  .footer
+  .buttonRigth
+  button:last-of-type {
   background-color: #ffffff;
   color: #12a9eb;
 }
-.wrap .wrapMethod .footer .buttonRigth button:hover {
+.containerRigth .content .wrap .wrapMethod .footer .buttonRigth button:hover {
   font-weight: bold;
   box-shadow: 5px 4px 6px 0px #bfc2c4;
 }
